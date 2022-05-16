@@ -25,7 +25,7 @@ export async function post({request}) {
     let host = request.headers.get("host")
     let protocol = request.headers.get("protocol")
     console.log("🚀 ~ file: fileList.js ~ line 30 ~ post ~ protocol", protocol)
-    let hostUrl = `${protocol}//${host}`
+    let hostUrl = `http://${host}`
     console.log('hostUrl', hostUrl)
     let body = await request.json()
         async function getDirectory(route) {
