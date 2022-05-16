@@ -1,5 +1,6 @@
 
 
+
 ## Getting started with LumberJill
 
 Git clone or use whichever method you prefer to download to host. Then run the app with whichever method you prefer 
@@ -39,3 +40,5 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+![image](https://user-images.githubusercontent.com/58837299/168538663-eeaf6d0b-ac52-4702-829f-e357cccd71be.png)
