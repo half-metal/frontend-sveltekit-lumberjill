@@ -2,13 +2,14 @@
 
 ## Getting started with LumberJill
 
-git clone or use whichever method you prefer to download to host. Then run the app with whichever method you prefer 
+Git clone or use whichever method you prefer to download to host. Then run the app with whichever method you prefer 
 
 ```bash
-# npm install for any updates
-# dev mode
+# for any updates
+npm install
+# dev mode run
 npm run dev
-# prod build
+# prod build run
 npx run build
 
 ```
