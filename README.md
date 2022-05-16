@@ -1,6 +1,4 @@
-# scan the directory for files
 
-Here you'll have a route 'search-logs-all' which pulls in data from a route with dynamic parameters [`create-svelte`]. Powered by Svelte.
 
 ## Creating a project
 
@@ -8,13 +6,22 @@ git clone or whichever method you prefer to download to host. Then run whichever
 
 ```bash
 # npm install for any updates
-# dev build
+# dev mode
 npm run dev
 # prod build
 npx run build
-# live network
-pm2
+
 ```
+
+# scan the directory for files
+Once you are up and running, you'll have a route 'search-logs-all' which pulls in data from a route with dynamic parameters [`/filterContents`]. If on your localhost and just running default port you will be on
+http://localhost:3060/search-logs-all, otherwise use the host ip
+
+# configure your agents
+each agent needs to be deployed on the host. You can either deploy this sveltekit or deploy the node backend.
+[https://github.com/half-metal/lumberjill-backend-node](https://github.com/half-metal/lumberjill-backend-node)
+Then you need to configure the connection details at the lib/components/agentConnections.js file.
+ ``` {env:"sveltekit non-prod",location:"http://{ip}:{port}",user:"user",pw:"pw"}```
 
 
 ## Building
