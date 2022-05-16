@@ -1,7 +1,8 @@
-//import fs from "fs";
+//This endpoint allows opening and parsing contents of a file on the host server
+//Some files may not have permissions, good idea to test with file that allowed to access
 import { promises as fs } from 'fs';
-//import { createReadStream } from 'node:fs';
-let response = [3]
+//import { createReadStream } from 'node:fs'; //& todo - use readStream for large files over certain size to take less memory
+let response = []
 let parsedFileContents
 let fileContents
 let date1, date2
