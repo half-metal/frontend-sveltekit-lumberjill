@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/58837299/168538663-eeaf6d0b-ac52-4702-829f-e357cccd71be.png)
+
 
 
 ## Getting started with LumberJill
@@ -39,3 +39,5 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+![image](https://user-images.githubusercontent.com/58837299/168538663-eeaf6d0b-ac52-4702-829f-e357cccd71be.png)
