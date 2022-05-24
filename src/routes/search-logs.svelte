@@ -17,19 +17,16 @@
     $searchDirectory = "/var/log" //default directory, can be configured
     let selectedAgent = agentConnections[1]
     const sendQuery = async() => {
-        
+        console.log("endpoint: selectedAgent/fileList:",`${selectedAgent.location}/fileList`)
         resultsResponse = [] // clear cache when next search
             try {
                 for (i in agentConnections) {
                 console.log('@debug iteration:',i)
-                console.log("endpoint: selectedAgent/fileList:",`${selectedAgent.location}/fileList`)
                 const response = await fetch(`${agentConnections[i].location}/fileList`, { 
                     method: 'POST', 
                     headers: {
                         'Accept': 'application/json',
-                        'Content-Type': 'application/json',
-                        'Connection' : 'keep-alive',
-                        'Host' : 'localhost'
+                        'content-type': 'application/json'
                     }, 
                     body: `{"searchDirectory" : "${$searchDirectory}"}`
                 });

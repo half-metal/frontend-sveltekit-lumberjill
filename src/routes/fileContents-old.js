@@ -1,5 +1,4 @@
-//TODO this needs to be revamped with streaming. Right now it opens the entire file into memory
-//TODO avoid using until fixed and use nodejs file with hyperStream.js
+//import fs from "fs";
 import { promises as fs } from 'fs';
 //import { createReadStream } from 'node:fs';
 let response = [3]
@@ -28,16 +27,16 @@ export async function post(req) {
           console.log('@debug fileContents.js - verify file path and name', `${searchDirectory}/${fileName}`)
             fileContents = await fs.readFile(`${searchDirectory}/${fileName}`, "utf8");
             parsedFileContents = fileContents.split(/\r?\n/)
-            //const countParsed = parsedFileContents.length
+            const countParsed = parsedFileContents.length
             const filteredFileContents = parsedFileContents.filter((x) => x.includes(searchFilter));
             filteredFileContents.sort(function(x, y){
                 date1 = new Date(x.mtime);
                 date2 = new Date(y.mtime);
                 return date1 - date2 ;
             })
-            //const countFiltered = filteredFileContents.length
+            const countFiltered = filteredFileContents.length
             response = fileContents
-            return filteredFileContents
+            return {countFiltered: countFiltered, countParsed: countParsed, result: filteredFileContents}
             } catch (error) {
               console.log(error)
               return error

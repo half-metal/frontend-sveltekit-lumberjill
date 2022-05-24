@@ -6,7 +6,7 @@ import ip from "ip"
 let res
 let errResponse
 let results
-let readAccess
+//let readAccess
 let date1, date2
 let serverIp = ip.address()
 let appName =  `Lumberjill`
@@ -36,11 +36,11 @@ export async function post({request}) {
                 for (let file of files) {
                     const extension = path.extname(file);
                     const fileStat = await fs.stat(route + "/" + file);
-                    // ways to access file
+                    // this section could be used to allow response to show access privs
                     // fs.access(route + "/" + file, fs.X_OK)
                     // .then(() => readAccess = 'Y')
                     // .catch(() => readAccess = 'N');  
-                    console.log('accessResult is:', readAccess)
+                    //console.log('accessResult is:', readAccess)
                     res = [...res, { name: file, extension: extension, size: fileStat.size, cdtm: fileStat.birthtime, mdtm: fileStat.mtime, serverIp, hostUrl }];
                     }
                 console.log('res:',res);
