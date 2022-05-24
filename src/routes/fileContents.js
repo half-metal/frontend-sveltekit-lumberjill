@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-//TODO this needs to be revamped with streaming. Right now it opens the entire file into memory
-//TODO avoid using until fixed and use nodejs file with hyperStream.js
-=======
+
+//this needs to be revamped with streaming. Right now it opens the entire file into memory
+//avoid using until fixed and use nodejs file with hyperStream.js
+
 //This endpoint allows opening and parsing contents of a file on the host server
 //Some files may not have permissions, good idea to test with file that allowed to access
->>>>>>> 6f46ea3fa2541866537e43c439d0da910cbbc5a1
 import { promises as fs } from 'fs';
 //import { createReadStream } from 'node:fs'; //& todo - use readStream for large files over certain size to take less memory
 let response = []
