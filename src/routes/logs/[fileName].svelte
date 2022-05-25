@@ -41,6 +41,7 @@
                     console.timeEnd("timer1");
                     //results = dataResponse.split('chunkDelimiter').reverse().join().split(/\r?\n/)
                     results = dataResponse.split(/\r?\n/)
+                   
                     //newBatch = results //this could be used for infinite scroll
                     if (results.errno) {
                         errorResponse = results
