@@ -16,11 +16,13 @@ npx run build
 ```
 
 # Configure your agents
-Each agent needs to be deployed on the host. You can either deploy this sveltekit or deploy the node backend.
+Each agent needs to be deployed on the host. For now, deploy the node backend.
 [https://github.com/half-metal/lumberjill-backend-node](https://github.com/half-metal/lumberjill-backend-node)
 Then you need to configure the connection details at the lib/components/agentConnections.js file.
  ``` {env:"sveltekit non-prod",location:"http://{ip}:{port}",user:"user",pw:"pw"}```
  LumberJill will query all agents configured.
+ 
+ TODO - revamp the Sveltekit Endpoint to handle chunked streaming. Chunked streaming is still not mature in Sveltekit. Therefore need to use https://github.com/half-metal/lumberjill-backend-node
 
 # Scan the directory for files
 Once you are up and running, you'll have a route ```search-logs-all``` which pulls in data from a route with dynamic parameters [`/filterContents`]. If on your localhost and just running with the default port, then you can use the app at the following:
